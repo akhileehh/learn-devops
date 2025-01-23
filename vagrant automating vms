@@ -1,5 +1,4 @@
-created vagrant-vms directory on d drive from bash
-
+created vagrant-vms directory on d drive of pc from bash
 
 akhil@AKHIL MINGW64 ~
 $ vagrant --version
