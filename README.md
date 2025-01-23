@@ -1,2 +1,3 @@
 # learn
-![image alt](https://gitlab.com/devops5242049/learn/-/raw/automation/Screenshot_2025-01-24_022234.png?ref_type=heads)
+![image alt](file:///C:/Users/akhil/Downloads/Telegram%20Desktop/Pictures/Screenshots/Screenshot%202025-01-24%20022309.png)
+![image alt](file:///C:/Users/akhil/Downloads/Telegram%20Desktop/Pictures/Screenshots/Screenshot%202025-01-24%20022234.png)
