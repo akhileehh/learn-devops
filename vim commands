@@ -1,0 +1,16 @@
+i       >>>>>>insert mode
+q       >>>>>quit
+w       >>>>>write
+q!      >>>>>>quit with out save
+se nu   >>>>>>set number
+shift G >>>>>> go to last line
+gg      >>>>>> go to last line 
+yy      >>>>>> copy line
+p       >>>>>> paste below
+P       >>>>>> paste above
+4yy     >>>>>> copy 4 lines for curser
+dd      >>>>>> delete    or cut
+5dd     >>>>>> delete 5 lines or cut 5 line
+yyp     >>>>>> copy paste
+ddp     >>>>>> cut paste
+u       >>>>>> undo
