@@ -7,6 +7,8 @@ cp                - Similar usage as mv but for copying files in Linux
 rm                - Delete files or directories
 touch             - Create blank/empty files
 file              - find type of file
+file yum   >>>>>>>  ascii file output
+file /bin/pwd >>>>  64 bit binary file
 ln                - Create symbolic links (shortcuts) to other files
 clear             - Clear the terminal display
 cat               - Display file contents on the terminal
