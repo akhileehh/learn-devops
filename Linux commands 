@@ -1,3 +1,40 @@
-ls 
-cd
-cd ..
+    1  pwd
+    2  sudo -i
+    3  exit
+    4  ls
+    5  pwd
+    6  mkdir dev
+    7  mkdir dev1 dev2
+    8  ls
+    9  touch textfile0
+   10  touch textfile{1..5}.txt
+   11  ls
+   12  cp textfile0 dev/
+   13  ls dev/
+   14  cp /home/vagrant/textfile1.txt /home/vagrant/dev/
+   15  ls /home/vagrant/dev/
+   16  mkdir backupdev
+   17  cp -r dev backupdev/             >>>>>copy to dir
+   18  ls backupdev/
+   19  cp --help
+   20  cd ~                             >>>>home dir
+   21  mv textfile0 dev2/
+   22  ls dev2/
+   23  ls
+   24  mv textfile0 textfile000
+   25  mv textfile1 textfile100
+   26  mv textfile1.txt textfile100.txt      >>>>move or rename
+   27  mv textfile1.txt textfile100.txt
+   28  ls
+   29  mkdir textdir
+   30  mv *.txt textdir/              >>>>>>>>>>> *=all   >>>>>> *.txt = all end with .txt
+   31  ls
+   32  ls /textdir
+   33  ls textdir/
+   34  mkdir temp
+   35  ls
+   36  rm -r temp              >>>>>>>>>>>>remove dir
+   37  ls
+   38  rm -r *
+   39  ls
+   40  history
