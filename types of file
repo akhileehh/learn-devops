@@ -1,0 +1,11 @@
+Types of files in linux.
+
+File Type First Character in File Listing Description
+Regular file>>>>>>>>>Normal files such as text, data, or executable files
+Directory    d >>>>>>>Files that are lists of other files
+Link         L >>>>>>>A shortcut that points to the location of the actual file
+Special file C >>>>>>>Mechanism used for input and output, such as files in /dev
+Socket       S>>>>>>>>A special file that provides inter-process networking protected by the file system's access control
+Pipe         p>>>>>>>>A special file that allows processes to communicate with each other without using network socket semantics
+
+------------------------------------------------------------------------------------------------------------------------------------
