@@ -1,3 +1,6 @@
+sudo yum install vim -y    for centos
+
+
 i       >>>>>>insert mode
 q       >>>>>quit
 w       >>>>>write
