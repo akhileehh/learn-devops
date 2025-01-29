@@ -17,3 +17,5 @@ dd      >>>>>> delete    or cut
 yyp     >>>>>> copy paste
 ddp     >>>>>> cut paste
 u       >>>>>> undo
+%s/coronavirus/covid19/g     >>>>>>>search coronavirus and replace it with covid19 ,g for globally
+%s/coronavirus//g        >>>>>replace it with nothing
