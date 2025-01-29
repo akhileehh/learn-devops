@@ -1,0 +1,33 @@
+search
+------
+# grep firewall anaconda-ks.cfg 
+# grep -i firewall anaconda-ks.cfg >>>>>>i uncase sensitive
+# grep -i firewall *   >>>>>>>>search in all files in current directory
+#grep -iR firewall *  >>>>>>>>> search include directorys
+# grep -R SELINUX /etc/*  >>>>>>>>search for specific option try it
+# grep -vi firewall anaconda-ks. cfg >>>>>> v for exception for word firewall
+
+----------------------------------------------------------------
+
+reader
+------
+#less anaconda-ks.cfg
+#more anaconda-ks.cfg
+#head anaconda-ks.cfg >>>>> view first 10 lines in file anaconda
+#head -20 anaconda-ks.cfg >>>>>>>for 20 lines
+#tail -20 anaconda-ks.cfg >>>>>>>view last 20 lines
+----------------------------------------------------------------SYSYEM ADMIN TIP
+----------------
+#tail -f >>>>>>>>>>view dynamic content ,use for log files(/var/log/messages),exit -ctrlc
+
+# awk -F' :' '{print $1}' /etc/passwd
+root
+bin
+daemon
+adm
+akhil
+sync
+centos
+operator
+
+
