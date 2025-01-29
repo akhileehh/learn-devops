@@ -9,3 +9,8 @@ Socket       S>>>>>>>>A special file that provides inter-process networking prot
 Pipe         p>>>>>>>>A special file that allows processes to communicate with each other without using network socket semantics
 
 ------------------------------------------------------------------------------------------------------------------------------------
+ln -s <orignalFilePath> <LinkFilePath>   >>>>>>>>>>>> ln -s dev/ops/text /file  cmds
+
+cat cmds[opens that file]
+
+rm cmds or  unlink cmds     >>>>>remove link
