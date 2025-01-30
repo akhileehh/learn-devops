@@ -37,6 +37,13 @@ centos
 operator
 #cut -d:-f1 /etc/passwd >>>>>>> same output
 
+-----------------------------------------------------------------
+
+REDIRECTION 
+-----------
+#uptime >/dev/ops/temp     >>>>>>content of uptime is copy to file
+#uptime>>/dev/ops/temp     >>>>>>overwrite
+
 
 
 
