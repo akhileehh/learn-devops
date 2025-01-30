@@ -1,4 +1,4 @@
-  search
+search
 ------
 # grep firewall anaconda-ks.cfg 
 # grep -i firewall anaconda-ks.cfg >>>>>>i uncase sensitive
@@ -12,7 +12,7 @@
 #find /etc -name akhi*    >>>>>>>> find file start with akhi 
 #locate akhi     >>>>>>>not real time search for update use updatedb command
 
-----------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 reader
 ------
@@ -21,7 +21,7 @@ reader
 #head anaconda-ks.cfg >>>>> view first 10 lines in file anaconda
 #head -20 anaconda-ks.cfg >>>>>>>for 20 lines
 #tail -20 anaconda-ks.cfg >>>>>>>view last 20 lines
-----------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 
 SYSYEM ADMIN TIP
@@ -41,14 +41,14 @@ centos
 operator
 #cut -d:-f1 /etc/passwd >>>>>>> same output
 
------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 REDIRECTION 
 -----------
 #uptime >/dev/ops/temp     >>>>>>content of uptime is copy to file
 #uptime>>/dev/ops/temp     >>>>>>overwrite
 
------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 PIPE
 ----
