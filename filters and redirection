@@ -9,6 +9,8 @@
 # grep -vi firewall anaconda-ks. cfg >>>>>> v for exception for word firewall
 #sed 's/coronavirus/covid19/g *.txt <file path>   >>>>>>> view of: search coronavirus and replace with covid19 globally from all txt files
 #sed -i 's/coronavirus/covid19/g *.txt <file path>  >>>>>for changing 
+#find /etc -name akhi*    >>>>>>>> find file start with akhi 
+#locate akhi     >>>>>>>not real time search for update use updatedb command
 
 ----------------------------------------------------------------
 
@@ -25,6 +27,8 @@ reader
 SYSYEM ADMIN TIP
 ----------------
 #tail -f >>>>>>>>>>view dynamic content ,use for log files(/var/log/messages),exit -ctrlc
+#cat /dev/null > temp.txt   >>>> null contain nothing
+#wc -l /etc/passwd          >>>> count lines
 
 # awk -F' :' '{print $1}' /etc/passwd
 root
@@ -44,6 +48,13 @@ REDIRECTION
 #uptime >/dev/ops/temp     >>>>>>content of uptime is copy to file
 #uptime>>/dev/ops/temp     >>>>>>overwrite
 
+-----------------------------------------------------------------
+
+PIPE
+----
+ls | wc -l        >>>>>> output of list is fed to count 
+ls | grep akhil   >>>>>> out of list fed to grep to search word akhil
+tail -20 /var/log/messages | grep -i akhil   >>>>>> search akhil in last 20 lines of that file
 
 
 
