@@ -55,6 +55,8 @@ uptime            - show load and users
 free -n           -memory utilization
 df -h             - harddisk partition
 cat /dev/null > temp.txt - null contain nothing
+wc -l /etc/passwd            - count lines
+
 --------------------------------------------------------------------------------------------------------------------------------  
     1  pwd
     2  sudo -i
