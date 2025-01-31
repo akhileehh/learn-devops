@@ -57,6 +57,9 @@ df -h             - harddisk partition
 cat /dev/null > temp.txt - null contain nothing
 wc -l /etc/passwd            - count lines
 arch              - find architechture of os
+curl and wget<link>    -download from external remote url
+
+
 
 --------------------------------------------------------------------------------------------------------------------------------  
     1  pwd
