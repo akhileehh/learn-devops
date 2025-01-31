@@ -58,6 +58,7 @@ cat /dev/null > temp.txt - null contain nothing
 wc -l /etc/passwd            - count lines
 arch              - find architechture of os
 curl and wget<link>    -download from external remote url
+yum and dnf           -package management tool for rpm based os (centos)
 
 
 
