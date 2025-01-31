@@ -56,6 +56,7 @@ free -n           -memory utilization
 df -h             - harddisk partition
 cat /dev/null > temp.txt - null contain nothing
 wc -l /etc/passwd            - count lines
+arch              - find architechture of os
 
 --------------------------------------------------------------------------------------------------------------------------------  
     1  pwd
