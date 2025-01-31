@@ -17,3 +17,10 @@ adding user to a group
 @rootuser >>#su - akhil     login as akhil
 user passwords(encrypted) are saved in /etc/shadow file
 
+-------------------------------------------------------------------------------------
+
+PERMISSION
+----------
+#ls -l
+#ls -ld                      >>>permissiom of dir
+filetype|user|group|other
