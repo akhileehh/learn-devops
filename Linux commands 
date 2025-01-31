@@ -56,11 +56,42 @@ free -n           -memory utilization
 df -h             - harddisk partition
 cat /dev/null > temp.txt - null contain nothing
 wc -l /etc/passwd            - count lines
+
+
+PACKAGE management
+------------------
+
 arch              - find architechture of os
 curl and wget<link>    -download from external remote url
 yum and dnf           -package management tool for rpm based os (centos)
+Where are yum repos and apt repos files located?
+/etc/yum.repos.d/   for yum |RED HAT os
+/etc/apt/sources.list.d  for apt |Debian os
+-------------------------------------------------------------------------------------------------------------------------------
 
+SERVICES
+--------
+systemctl start httpd       >>>>start httpd service
+systemctl restart httpd
+systemctl status httpd
+systemctl enable httpd      >>>> start service from boot time
+systemctl is-active httpd   >>>> gives on|off
 
+--------------------------------------------------------------------------------------------------------------------------------
+
+PROCESSES
+---------
+top             >>>>show like taskmanager
+ps aux          >>>> same
+ps -ef          >>>> show with ppid parent process id
+kill <ppid>     >>> stop operation 
+
+-------------------------------------------------------------------------------------------------------------------------------
+ARCHIVING
+---------
+tar --help
+zip -r devdir_212025 devdir    >>>> zip devdir and save zip name as devdir_212025
+Unzip
 
 --------------------------------------------------------------------------------------------------------------------------------  
     1  pwd
