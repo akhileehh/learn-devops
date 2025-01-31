@@ -1,6 +1,10 @@
+$ = debian os (ubuntu)
+# = same in red hat centos & ubuntu
+
 #cat /etc /group             >>>> group information
 #id<username>                >>>>user information
 #useradd akhil
+$ #adduser akhil             $   
 #userdel <username>          >>>>delete user ,home dir exit
 #userdel -r <username>       >>>>>delete user with home dir
 #tail -4 /etc/passwd         >>>> user information
@@ -39,3 +43,6 @@ SUDO privilage
 #su -<username>              >>>> switch user
 #sudo -i                     >>>> switch to root user
 #visudo  (/etc/sudoers)      >>>> vim,search for root ,add new line change root>username needed sudo permission,(NOPASSWD: ALL  dont ask for pass)
+
+$ #export EDITOR vim           >>>> $  build in editor is nano in ubuntu
+$ #visudo 
