@@ -64,6 +64,15 @@ PACKAGE management
 arch              - find architechture of os
 curl and wget<link>    -download from external remote url
 yum and dnf           -package management tool for rpm based os (centos)
+
+$ dpkg                - pm tool in ubuntu
+$apt update
+$apt install <pkg name>
+$apt upgrade    
+$apt remove
+$apt purge <pkg name>    >>>>> remove pkg with all its config and data
+ufw is ubuntu firewall
+
 Where are yum repos and apt repos files located?
 /etc/yum.repos.d/   for yum |RED HAT os
 /etc/apt/sources.list.d  for apt |Debian os
