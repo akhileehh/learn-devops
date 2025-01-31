@@ -1,0 +1,19 @@
+#cat /etc /group    >>>> group information
+#id<username>       >>>>user information
+#useradd akhil
+#userdel <username>   >>>>delete user ,home dir exit
+#userdel -r <username>   >>>>>delete user with home dir
+#tail -4 /etc/passwd >>>> user information
+#last   >>>>>> login details
+#lsof -u <username>   >>>show all open files by user
+
+
+adding user to a group 
+----------------------
+1)usermod -aG devops akhil   >>>>added user akhil to group devops
+2)vim /etc/group  >>> with , seperator
+
+#passwd akhil >>> setting password
+@rootuser >>#su - akhil     login as akhil
+user passwords(encrypted) are saved in /etc/shadow file
+
