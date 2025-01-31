@@ -31,3 +31,11 @@ filetype|user|group|other
 2=write
 1=execute
 #chmod 640 myfile            >>> r&w for group,r for gruop,no permission for others
+
+------------------------------------------------------------------------------------
+
+SUDO privilage
+--------------
+#su -<username>              >>>> switch user
+#sudo -i                     >>>> switch to root user
+#visudo  (/etc/sudoers)      >>>> vim,search for root ,add new line change root>username needed sudo permission,(NOPASSWD: ALL  dont ask for pass)
