@@ -24,3 +24,10 @@ PERMISSION
 #ls -l
 #ls -ld                      >>>permissiom of dir
 filetype|user|group|other
+#chown <username>            >>> to change ownership
+#chmod g+w /path             >>>write permission for group
+#chmod o-x /path             >>> remove execute permission to others
+4=read
+2=write
+1=execute
+#chmod 640 myfile            >>> r&w for group,r for gruop,no permission for others
