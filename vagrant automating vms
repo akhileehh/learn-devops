@@ -85,8 +85,8 @@ logout
 
 
 vagrant halt
-vagrant reload
-vagrant ssh  // for login
+vagrant reload                  >>>> after editing vagrant files through vs code and added vp.cpus ="2" ,public network ,vp.memory ="1600" ,ip address
+vagrant ssh                     >>>> for login
 vagrant up
 vagrant destroy
 vagrant status
