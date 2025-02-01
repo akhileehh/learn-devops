@@ -85,13 +85,37 @@ logout
 
 
 vagrant halt
-vagrant reload                  >>>> after editing vagrant files through vs code and added vp.cpus ="2" ,public network ,vp.memory ="1600" ,ip address
-free -m                         >>>>find ram usage
-cat /proc/cpuinfo               >>>> find cpu cores
+vagrant reload 
 vagrant ssh                     >>>> for login
-vagrant up
+vagrant up                      >>>> start
 vagrant destroy
 vagrant status
 vagrant box list
 vagrant global-status
-history  
+
+TO Edit VM memory,ip,cpu,ram
+----------------------------
+vagrant reload     >>>> after editing vagrant files through vs code and added vp.cpus ="2" ,public network ,vp.memory ="1600" ,ip address
+free -m                         >>>>find ram usage
+cat /proc/cpuinfo               >>>> find cpu cores
+
+
+TO SYNC directorys of host and guest
+------------------------------------
+
+#config.vm.synced_folder   edited for maping a folder created in host machine to vm>>>> config.vm.synced_folder "D:\\dev\\ops", "/opt/scripts"
+/opt/scripts is guest machine folder 
+dev/ops is host machinefolder
+
+
+PROVISIONING /bootstrapping (executing script when vm comes up ) 
+------------------------------------------------
+config.vm.provision "shell", inline: <<-SHELL      <<<<edit this
+apt-get update
+apt-get install -y apache2
+SHELL
+
+$ vagrant reload --provision
+
+
+
