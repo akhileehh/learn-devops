@@ -1,0 +1,31 @@
+for sample index.html template (tooplate.com)
+create folder in d drive
+#vagrant box list
+#vagrant init eurolinux centos-9
+#vagrant up
+#vi /etc/hostname
+#hostname website
+#exit
+#yum install httpd wget vim unzip zip -y
+#systemctl start httpd
+#systemctl enable httpd
+#ip addr show           >>>>http://ipaadr
+#cd /var/www/html/
+#vim index.html         >>>> edit if needed
+#systemctl restart httpd
+#cd /tmp/
+#wget https://www.tooplate.com/zip-templates/2133_moso_interior.  zip
+#ls
+#unzip 2133_moso_interior.zip
+#ls
+#cd 2133_moso_interior
+#ls
+#cp -r * /var/www/html
+#ls /var /www/html
+#systemctl restart httpd
+#systemctl status httpd
+#systemctl status firewalld
+#systemctl stop firewall
+#systemctl disable firewall
+#ip addr show            >>>>>>>>httpd://ip
+ 
