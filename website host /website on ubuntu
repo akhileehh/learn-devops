@@ -1,0 +1,18 @@
+Install and configure WordPress
+
+STEPS;documentation https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
+
+>>Install Dependencies
+
+>>Install WordPress
+
+>>Configure Apache for WordPress
+
+>>Configure database
+
+>>Configure WordPress to connect to the database
+
+>>Configure WordPress
+
+>>Write your first post
+
