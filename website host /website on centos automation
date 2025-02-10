@@ -1,0 +1,17 @@
+THIS IS A AUTOMATED SCRIPT FOR HOSTING A  HTML TEMPLATE ON CENTOS MACHINE  
+config.vm.provision "shell", inline: <<-SHELL
+    yum install httpd wget unzip -y
+    systemctl start httpd
+    ststemctl enable httpd
+    mkdir -p /tmp/website
+    cd /tmp/website
+    wget https://www.tooplate.com/zip-templates/2133_moso_interior.zip
+    unzip -o 2133_moso_interior.zip
+    cp -r 2133_moso_interior/* /var/www/html
+    systemctl restart httpd
+    cd /tmp
+    rm -rf /temp/finance
+
+
+  SHELL
+end
