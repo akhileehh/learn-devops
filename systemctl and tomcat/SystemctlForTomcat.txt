@@ -1,0 +1,53 @@
+#Download tomcat
+wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.28/bin/apache-tomcat-10.1.28.tar.gz
+
+#Extract tomcat
+tar xzvf apache-tomcat-10.1.28.tar.gz
+
+#Create tomcat user
+useradd --home-dir /opt/tomcat --shell /sbin/nologin tomcat
+
+#Copy files to tomcat home directory
+cp -r apache-tomcat-10.1.28/* /opt/tomcat/
+
+#Give tomcat user ownership to tomcat directory
+chown -R tomcat.tomcat /opt/tomcat/
+
+
+#Create system file for tomcat service
+vim /etc/systemd/system/tomcat.service
+
+#Paste below content
+
+[Unit]
+Description=Tomcat
+After=network.target
+
+
+[Service]
+Type=forking
+
+User=tomcat
+Group=tomcat
+
+WorkingDirectory=/opt/tomcat
+
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+
+Environment=CATALINA_HOME=/opt/tomcat
+Environment=CATALINE_BASE=/opt/tomcat
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+# Reload system config changes
+systemctl daemon-reload
+
+#Start & Enable tomcat service
+systemctl start tomcat
+systemctl status tomcat
+systemctl enable tomcat
