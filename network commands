@@ -1,0 +1,12 @@
+ifconfig | ip addr show      >>>>>>>>> to show network interfaces
+ping (ip address)            >>>>>>>>> send packets to find network connectivity
+vi /etc/hosts                -can add ipaddress of target machine and name (192.168.40.12 db01) ,then ping db01 to check connectivity
+tracert www.google.in        >>>>>>>>> check connectivity not work in virtualmachine use terminal
+netstat-antp                 >>>>>>>>> show all tcp open ports in current machine
+nmap localhost               >>>>>>>>> show open ports
+nmap db01                    >>>>>>>>> scan open ports of target machine db01
+dig www.google.com           >>>>>>>>> show dns look up
+route-n                      >>>>>>>>> show gateways
+mtr www.google.com           >>>>>>>>> show live connectivity and packetloss
+telnet (ip)                  >>>>>>>>> to check perticular port is open or not
+arp                          >>>>>>>>> to see kernals arp table
