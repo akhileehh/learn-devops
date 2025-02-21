@@ -4,7 +4,8 @@ SYSYTEM ARGUMENTS
 $0 is the name of the script.
 $1-$9 are the command line arguments.
 echo $? is the way to print exit status of last command
-
+$USER 
+$HOSTNAME
 
 QUOTES '' ""
 --------
@@ -16,5 +17,27 @@ echo "due to $VIRUS virus company have lost \$9 millon"   >>>>>argument after / 
 COMMAND SUBSTITUTION
 --------------------
 UP=`uptime`      >>>>>back tick | value of uptimeis stored  in UP 
+
+
+
+FREERAM=`free -m | grep mem | awk '{print $4}'`
+-----------------------------------------------
+
+free -m:
+free: This command displays the amount of free and used memory in the system.
+-m: This option tells the free command to show the output in megabytes.
+
+grep mem:
+grep: This command searches for a specific pattern in the input it receives.
+mem: This is the pattern that grep is looking for in the output of the free -m command. Specifically, it's searching for the line that contains the word "mem".
+
+awk '{print $4}':
+awk: This is a powerful text-processing command used to manipulate data and generate reports.
+'{print $4}': This part of the command tells awk to print the fourth column of the input it receives. The columns are typically space-separated.
+
+`` Back thick ,it store the vale inside to FREERAM
+
+
+
 
 
