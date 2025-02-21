@@ -5,8 +5,8 @@ read SKILL
 
 echo "Your $SKILL skill is in high Demand in the IT Industry."
 
-read -p 'Username: ' USR
-read -sp 'Password: ' pass
+read -p 'Username: ' USR     #-p promt
+read -sp 'Password: ' pass   #-s suppress or hidden
 
 echo
 
