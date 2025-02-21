@@ -1,0 +1,12 @@
+SYSYTEM ARGUMENTS
+------------------
+
+$0 is the name of the script.
+$1-$9 are the command line arguments.
+echo $? is the way to print exit status of last command
+
+
+
+
+
+
