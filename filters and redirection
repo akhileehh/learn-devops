@@ -57,6 +57,7 @@ ls | grep akhil   >>>>>> out of list fed to grep to search word akhil
 tail -20 /var/log/messages | grep -i akhil   >>>>>> search akhil in last 20 lines of that file
 
 FREERAM=`free -m | grep mem | awk '{print $4}'`
+-----------------------------------------------
 
 
 free -m:
