@@ -6,7 +6,15 @@ $1-$9 are the command line arguments.
 echo $? is the way to print exit status of last command
 
 
+QUOTES '' ""
+--------
+single quotes remove the value of specal character
+VIRUS="COVID 19"
+echo "due to $VIRUS virus company have lost \$9 millon"   >>>>>argument after / will ignore
 
 
+COMMAND SUBSTITUTION
+--------------------
+UP=`uptime`      >>>>>back tick | value of uptimeis stored  in UP 
 
 
