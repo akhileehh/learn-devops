@@ -14,3 +14,7 @@ ln -s <orignalFilePath> <LinkFilePath>   >>>>>>>>>>>> ln -s dev/ops/text /file  
 cat cmds[opens that file]
 
 rm cmds or  unlink cmds     >>>>>remove link
+-------------------------------------------------------------------------------------------------------------------------------------
+
+/etc/.bashrc              >>>>>>> can add permanent variables for single user,every user has own file | export VIRUS="covid 19"
+/etc/profile              >>>>>>> can permanent variables globally for every user
