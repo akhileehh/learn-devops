@@ -2,7 +2,7 @@
 PORT NUMBERS
 ````
 
-![](https://github.com/akhileehh/learn-devops/blob/Network/pictures/photo_2025-02-19_03-19-58.jpg?raw=true)
+![](https://github.com/akhileehh/learn-devops/blob/Network/pictures/Screenshot%202025-03-06%20053705.png?raw=true)
 
 ````
 SUMMARY OF LAYERS
