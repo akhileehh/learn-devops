@@ -1,0 +1,9 @@
+--create two instance with Amazon AMI (with a website )
+--create own AMI
+--create a launch template for future asses
+--create target group 
+--create  application load balancer
+--attach target group to LB
+--create SG to LB
+--copy the DNS name of LB ,search it on web
+--(504 gateway error) > edit SG of instance >add inbound rule ,accepting port 80 from SG of LB
