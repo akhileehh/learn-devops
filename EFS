@@ -18,15 +18,23 @@ $ sudo yum -y install amazon-efs-utils
 on other distributions check https://docs.aws.amazon.com/efs/latest/ug/mount-fs-auto-mount-update-fstab.html
 
 
+Update the /etc/fstab file
+Perform the following steps to update the /etc/fstab on an EC2 Linux instance so that the instance uses the EFS mount helper to automatically remount an EFS file system when the instance restarts.
 
-To authenticate with EFS using the system’s IAM identity, add the iam option. This option requires the tls option.
-$ sudo mount -t efs -o tls,iam file-system-id efs-mount-point/
+To update the /etc/fstab file on your EC2 instance
+Connect to your EC2 instance. For more information, see Connect to your EC2 instance in the Amazon EC2 User Guide.
 
-To mount using an access point, use the accesspoint= option. This option requires the tls option. The access point must be in the "available" state before it can be used to mount EFS.
-$ sudo mount -t efs -o tls,accesspoint=access-point-id file-system-id efs-mount-point/
+Open the /etc/fstab file in an editor.
 
-To mount your file system automatically with any of the options above, you can add entries to /efs/fstab like:
-file-system-id efs-mount-point efs _netdev,tls,iam,accesspoint=access-point-id 0 0
+For automatic mounting using either IAM authorization or an EFS access point:
+To automatically mount with IAM authorization to an EC2 instance that has an instance profile, add the following line to the /etc/fstab file.
+file-system-id:/ efs-mount-point efs _netdev,noresvport,tls,iam 0 0
+
+To automatically mount with IAM authorization to a Linux instance using a credentials file, add the following line to the /etc/fstab file.
+file-system-id:/ efs-mount-point efs _netdev,noresvport,tls,iam,awsprofile=namedprofile 0 0
+
+To automatically mount a file system using an EFS access point, add the following line to the /etc/fstab file.
+file-system-id:/ efs-mount-point efs _netdev,noresvport,tls,accesspoint=access-point-id 0 0
 
 --make back up for img before mount
 -- vi /etc/fstab   > copy it
