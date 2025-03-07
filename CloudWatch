@@ -7,5 +7,8 @@ CLOUD WATCH IS A MONITORING SERVICE ,WE CAN CREATE ALARM IF NEEDED
 > sudo yum install stress -y
 --mannualy creating stress
 > nohup stress -c -4 -t 300 &
->sleep 60 && stress -c 4 -t 60 && stress -c 4 -t 30 && sleep 30 && sress -c 4 -t 200 && sleep 30 && stress -c 4 -t 500         
---go to cloudwatch service and create alarm 
+>sleep 60 && stress -c 4 -t 60 && stress -c 4 -t 30 && sleep 30 && sress -c 4 -t 200 && sleep 30 && stress -c 4 -t 500     
+
+| -c cpu | -t time | nohup  &  background run |   
+
+--go to cloudwatch service and create alarm for cpu utilization matrix
