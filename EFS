@@ -38,4 +38,4 @@ file-system-id:/ efs-mount-point efs _netdev,noresvport,tls,accesspoint=access-p
 
 --make back up for img before mount
 -- vi /etc/fstab   > copy it
---
+-- mount -fav
