@@ -15,7 +15,7 @@ For those using Amazon Linux, the easiest way to install efs-utils is from Amazo
 ``
 $ sudo yum -y install amazon-efs-utils
 ``
-on other distributions check https://github.com/aws/efs-utils/blob/master/README.md
+on other distributions check https://docs.aws.amazon.com/efs/latest/ug/mount-fs-auto-mount-update-fstab.html
 
 
 
