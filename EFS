@@ -1,0 +1,33 @@
+elastic file system 
+> shared file system over network ,it is inside SG
+> can mount on many ec2 dir
+> very useful for dynamic application
+
+-- for sudy mounting var/www/html/img of web01 from launch template to efs
+-- create Sg > inbound rule nfs >allowed from sg of web server
+-- create efs > coustomize
+-- create access point
+
+
+Installation
+On Amazon Linux distributions
+For those using Amazon Linux, the easiest way to install efs-utils is from Amazon's repositories:
+``
+$ sudo yum -y install amazon-efs-utils
+``
+on other distributions check https://github.com/aws/efs-utils/blob/master/README.md
+
+
+
+To authenticate with EFS using the system’s IAM identity, add the iam option. This option requires the tls option.
+$ sudo mount -t efs -o tls,iam file-system-id efs-mount-point/
+
+To mount using an access point, use the accesspoint= option. This option requires the tls option. The access point must be in the "available" state before it can be used to mount EFS.
+$ sudo mount -t efs -o tls,accesspoint=access-point-id file-system-id efs-mount-point/
+
+To mount your file system automatically with any of the options above, you can add entries to /efs/fstab like:
+file-system-id efs-mount-point efs _netdev,tls,iam,accesspoint=access-point-id 0 0
+
+--make back up for img before mount
+-- vi /etc/fstab   > copy it
+--
