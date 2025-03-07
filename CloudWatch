@@ -1,0 +1,11 @@
+CLOUD WATCH IS A MONITORING SERVICE ,WE CAN CREATE ALARM IF NEEDED
+--run EC2 from launch template
+--select intance and watch monitoring tab
+--login to instance as root user
+--intall stress
+> sudo amazon-linux-extras install epel -y
+> sudo yum install stress -y
+--mannualy creating stress
+> nohup stress -c -4 -t 300 &
+>sleep 60 && stress -c 4 -t 60 && stress -c 4 -t 30 && sleep 30 && sress -c 4 -t 200 && sleep 30 && stress -c 4 -t 500         
+--go to cloudwatch service and create alarm 
