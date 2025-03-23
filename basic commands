@@ -20,6 +20,7 @@ git push --all origin                    >>> push all branch to remote repo
 
 git log --oneline                         >>> show online commit id
 git show <commit id>                      >>> view changes
+git diff --cache                          >>> view changes of staged file
 git pull                                  >>> pull leatest repo 
 git brach -c <name>                       >>> create branch
 git brach -a                              >>> list all braches
@@ -27,3 +28,13 @@ git checkout <brachname> | git switch     >>> change branch
 git rm <file name>                        >>> to remove files
 vim .gitignore                            >>> add file names that as to ignored by git , *.log all files with .log ending will be ignored
 git merge <branch name>                   >>> go to main branch and type this,so the branch is merged to main
+git clone <https link>                    >>> to clone pubic repo locally
+
+
+git roll back
+----------------------------------------------------
+git diff <commit id 1> <commit id 2>      >>> to see differce of two commits
+git checkout <file name>                  >>> use before staging  
+git restore --staged <file name>          >>> use after staging 
+git revert  HEAD <commit id>              >>> Use after committing
+git reset --hard <commit id>              >>> roll back to this perticular commit ,delete all history afer this commit
