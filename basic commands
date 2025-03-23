@@ -23,5 +23,5 @@ git show <commit id>                      >>> view changes
 git pull                                  >>> pull leatest repo 
 git brach -c <name>                       >>> create branch
 git brach -a                              >>> list all braches
-git checkout <brachname>                  >>> change branch
+git checkout <brachname> | git switch     >>> change branch
 git rm <file name>                        >>> to remove files
