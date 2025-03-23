@@ -16,7 +16,7 @@ push an existing repository from the command line
 git remote add origin https://github.com/akhileehh/<reponame>.git
 git branch -M main                       >>> create branch named main
 git push -u origin main                  >>> push all content from local to remmote repo named main
-
+git push --all origin                    >>> push all branch to remote repo
 
 git log --oneline                         >>> show online commit id
 git show <commit id>                      >>> view changes
@@ -25,4 +25,5 @@ git brach -c <name>                       >>> create branch
 git brach -a                              >>> list all braches
 git checkout <brachname> | git switch     >>> change branch
 git rm <file name>                        >>> to remove files
-vim gitignore                             >>> add file names that as to ignored by git , *.log all files with .log ending will be ignored
+vim .gitignore                            >>> add file names that as to ignored by git , *.log all files with .log ending will be ignored
+git merge <branch name>                   >>> go to main branch and type this,so the branch is merged to main
