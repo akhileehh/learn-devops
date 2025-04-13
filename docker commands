@@ -1,0 +1,61 @@
+🐳 1. Docker Basics
+
+docker --version – Displays installed Docker version
+docker info – Shows Docker system info
+docker help – Lists all Docker commands
+
+📦 2. Working with Images
+docker pull <image> – Download image from Docker Hub
+docker images – View all downloaded images
+docker rmi <image> – Delete an image
+docker build -t <name> . – Build image from Dockerfile
+
+
+🧱 3. Working with Containers
+docker run <image> – Run a container
+docker run --name <name> <image> – Run container with a specific name
+docker ps – List running containers
+docker ps -a – List all containers (running + stopped)
+docker stop <container> – Stop a running container
+docker start <container> – Start a stopped container
+docker restart <container> – Restart a container
+docker rm <container> – Remove a container
+docker exec -it <container> bash – Get shell access into a container
+docker logs <container> – View container logs
+
+
+🗃️ 4. Volumes (Data Management)
+docker volume create <name> – Create a volume
+docker volume ls – List all volumes
+docker volume inspect <name> – Show volume details
+docker volume rm <name> – Remove a volume
+
+
+🌐 5. Networking
+docker network ls – List Docker networks
+docker network create <name> – Create a custom network
+docker network connect <network> <container> – Connect a container to a network
+docker network inspect <name> – Show network details
+
+
+📄 6. Dockerfile & Image Management
+docker build -t <name> . – Build an image from a Dockerfile
+docker tag <image> <repo>:<tag> – Tag/rename an image
+docker push <repo>:<tag> – Push image to Docker Hub
+docker login – Log in to Docker Hub
+
+
+🧹 7. Cleanup Commands
+docker container prune – Remove all stopped containers
+docker image prune – Remove unused/dangling images
+docker system prune -a – Remove unused data (images, containers, volumes, etc.)
+
+
+
+📦 8. Docker Compose (for multi-container apps)
+docker-compose up – Start services defined in docker-compose.yml
+docker-compose up -d – Start services in detached mode
+docker-compose down – Stop and remove services/containers
+docker-compose build – Build services
+docker-compose logs – View service logs
+docker-compose exec <service> <cmd> – Run a command in a service container
