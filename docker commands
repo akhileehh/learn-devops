@@ -22,7 +22,13 @@ docker restart <container> – Restart a container
 docker rm <container> – Remove a container
 docker exec -it <container> bash – Get shell access into a container
 docker logs <container> – View container logs
+###########################################
+docker run --name web01 -d -p 9080:80 nginx     >>>>>port mapping available on web
+docker inspect <name>                           >>> gives info including ip
 
+
+
+##############
 
 🗃️ 4. Volumes (Data Management)
 docker volume create <name> – Create a volume
