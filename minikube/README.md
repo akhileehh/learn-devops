@@ -10,4 +10,4 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 ```
 minikube start
 ```
-![Screenshot 2025-01-28 160559](https://github.com/user-attachments/assets/3f14cdfb-a006-468c-916f-278f43041d1e)
+
