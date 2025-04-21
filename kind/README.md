@@ -1,5 +1,8 @@
 ## Install kind on linux:
-
+## kind -kubernetes in docker:
+install docker 
+```
+sudo apt-get install docker.io
 ```
 
 #!/bin/bash
