@@ -23,7 +23,7 @@ echo "kind & kubectl Successfully Installed!"
 ## Multi-node clusters
 
 You can also have a cluster with multiple control-plane & worker nodes, create a config file.
-
+create a config.yaml 
 ```
 
 kind: Cluster
@@ -42,4 +42,7 @@ nodes:
     hostPort: 80
     protocol: tcp
 
+```
+```
+kubectl create cluster --name=kindcluster --config=config.yaml
 ```
