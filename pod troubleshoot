@@ -1,0 +1,19 @@
+ $ kubectl get pod
+
+ 
+NAME      READY    STATUS              RESTARTS      AGE
+nginx1    1/1      Running             1             (87m ago) 89m
+nginx12   0/1      ImagePullBackOff    0             16m
+web2      0/1      CrashLoopBackOff    7             (5m9s ago) 16m
+
+
+imagepullbackoff    >>>>> improper image name or image does not exist
+CrashLoopBackOff :
+
+$ kubectl get pod web2 -0 wide
+
+$ kubectl get pod web2 -0 yaml
+
+$ kubectl describe pod web2
+
+$ kubectl logs web2
