@@ -16,7 +16,7 @@ TO DO
 1.cloudBees docker build and publish
 2.docker pipeline 
 3.AMAZON ECR
-4.AWS web services SDK
+4.AWS web services SDK all
 5.pipeline:aws steps
 -------------------------------------------------------------------------------
 >>> Jenkins
