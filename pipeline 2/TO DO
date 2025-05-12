@@ -37,3 +37,4 @@ TO DO
 EDIT PIPELINE CODE -add changes and run job   
 > Deploying on ECS elastic container service 
 > kubernetes is good prod env 
+> create ECS cluster and ecs service
