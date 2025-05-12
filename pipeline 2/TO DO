@@ -34,4 +34,6 @@ TO DO
 3.install AWS CLI
   $ sudo snap install aws-cli --classic
 ---------------------------------------------------------------------------------
-EDIT PIPELINE CODE -add changes and run job
+EDIT PIPELINE CODE -add changes and run job   
+> Deploying on ECS elastic container service 
+> kubernetes is good prod env 
