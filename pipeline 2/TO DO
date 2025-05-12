@@ -17,6 +17,7 @@ TO DO
 2.docker pipeline 
 3.AMAZON ECR
 4.AWS web services SDK
+5.pipeline:aws steps
 -------------------------------------------------------------------------------
 >>> Jenkins
 
