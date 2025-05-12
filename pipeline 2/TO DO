@@ -1,0 +1,37 @@
+pipeline 2 
+TO DO
+
+>>> AWS 
+
+1.IAM user with access key
+  > attach policies 
+    -container registery full access
+    -ecs full access
+  > create access key 
+2.ECR
+  > create ecr 
+-----------------------------------------------------------------------------
+>>> plugins on jenkins
+
+1.cloudBees docker build and publish
+2.docker pipeline 
+3.AMAZON ECR
+4.AWS web services SDK
+-------------------------------------------------------------------------------
+>>> Jenkins
+
+1.store AWS access key credentials 
+  > add aws global credentials ,copy access and secret key from .csv file
+
+2.install docker engine 
+  $ refer docker engine installation
+  $ systemctl status docker
+  > add jenkins user in docker group
+    $ usermod -a -G docker jenkins
+  > restart jenkins
+  
+
+3.install AWS CLI
+  $ sudo snap install aws-cli --classic
+---------------------------------------------------------------------------------
+EDIT PIPELINE CODE -add changes and run job
