@@ -1,5 +1,4 @@
-THIS IS A REFERENCE NOTE FOR DEVOPS ,CHECK THE BRANCHES FOR MORE INFORMATION
 
-----------------------------------------------------------------------------
-
-![](https://github.com/akhileehh/learn-devops/blob/automation/essential%20pictures/devopstools%20(2).jpg?raw=true)
+SECOND PIPELINE
+---------------------------------------------------------------------------------------------------------------------------
+![](https://github.com/akhileehh/learn-devops/blob/Jenkins-CICD/pipeline%202/Screenshot%202025-05-12%20173710.png?raw=true)
