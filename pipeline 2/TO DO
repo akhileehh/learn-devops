@@ -47,6 +47,7 @@ TO DO 2.1 PIPELINE
     > pipeline:aws steps
 -------------------------------------------------------------------------------
 >>> AWS
+    > confirm AWS cli installed on jenkins
     > Create ECS /Cluster -enable cloudwatch monitoring /task definition-with IAM role for cloudwatch logs full access
     > create a service under cluster -family select task definition
     > Networking -create sg for lb  >https anywhere / >custom tcp 8080 anywhere / application lb
