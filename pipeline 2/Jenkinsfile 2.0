@@ -9,8 +9,8 @@ pipeline {
 
     environment {
         registryCredential = 'ecr:us-east-1:awscreds'
-        imageName = "216989116397.dkr.ecr.us-east-1.amazonaws.com/docker-img"
-        vprofileRegistry = "https://216989116397.dkr.ecr.us-east-1.amazonaws.com"
+        imageName = "2169l98797.dkr.ecr.us-east-1.amazonaws.com/docker-img"
+        vprofileRegistry = "https://21698656397.dkr.ecr.us-east-1.amazonaws.com"
     }
   stages {
    
