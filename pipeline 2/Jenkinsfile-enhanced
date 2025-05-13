@@ -1,0 +1,113 @@
+pipeline {
+    agent any
+    tools {
+        maven "MAVEN3.9"
+        jdk "JDK17"
+    }
+    environment {
+        // ECR repository configuration
+        appRegistry = "21611164497.dkr.ecr.us-east-1.amazonaws.com/docker-img"
+        vprofileRegistry = "https://21646397.dkr.ecr.us-east-1.amazonaws.com"
+        registryCredential = 'ecr:us-east-1:awscreds'
+        cluster = "appcluster"
+        service = "javapp_td-service"
+    }
+    stages {
+        stage('Fetch code') {
+            steps {
+                git branch: 'vprofile-docker', url: 'https://github.com/akhileehh/javappdata.git'
+            }
+        }
+        stage('Build'){
+            steps{
+               sh 'mvn install -DskipTests'
+            }
+            post {
+               success {
+                  echo 'Now Archiving it...'
+                  archiveArtifacts artifacts: '**/target/*.war'
+               }
+            }
+        }
+        stage('UNIT TEST') {
+            steps{
+                sh 'mvn test'
+            }
+        }
+        stage('Checkstyle Analysis') {
+            steps{
+                sh 'mvn checkstyle:checkstyle'
+            }
+        }
+        stage("Sonar Code Analysis") {
+            environment {
+                scannerHome = tool 'sonar6.2'
+            }
+            steps {
+              withSonarQubeEnv('sonarserver') {
+                sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
+                   -Dsonar.projectName=vprofile \
+                   -Dsonar.projectVersion=1.0 \
+                   -Dsonar.sources=src/ \
+                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
+                   -Dsonar.junit.reportsPath=target/surefire-reports/ \
+                   -Dsonar.jacoco.reportsPath=target/jacoco.exec \
+                   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
+              }
+            }
+        }
+        stage("Quality Gate") {
+            steps {
+              timeout(time: 1, unit: 'HOURS') {
+                waitForQualityGate abortPipeline: true
+              }
+            }
+        }
+        stage('Verify AWS Access') {
+            steps {
+                withAWS(credentials: 'awscreds', region: 'us-east-1') {
+                    sh 'aws sts get-caller-identity'
+                    sh 'aws ecr describe-repositories --repository-names docker-img || echo "Repository not found"'
+                }
+            }
+        }
+        stage('Build App Image') {
+            steps {
+                script {
+                    dockerImage = docker.build(appRegistry + ":$BUILD_NUMBER", "./Docker-files/app/multistage/")
+                }
+            }
+        }
+        stage('Upload App Image') {
+            steps {
+                script {
+                    // Using docker.withRegistry properly handles the authentication
+                    echo "Starting image push to ECR..."
+                    docker.withRegistry(vprofileRegistry, registryCredential) {
+                        echo "Pushing image tag: $BUILD_NUMBER"
+                        dockerImage.push("$BUILD_NUMBER")
+                        echo "Pushing image tag: latest"
+                        dockerImage.push('latest')
+                        echo "Push completed"
+                    }
+                }
+                // Verify images with withAWS to ensure proper credentials
+                withAWS(credentials: 'awscreds', region: 'us-east-1') {
+                    sh 'aws ecr describe-images --repository-name docker-img --region us-east-1 --query "imageDetails[?contains(imageTags, \'latest\')]"'
+                }
+            }
+        }
+        stage('Remove Container Images') {
+            steps {
+                sh 'docker rmi -f $(docker images -a -q) || true'
+            }
+        }
+        stage('Deploy to ecs') {
+            steps {
+                withAWS(credentials: 'awscreds', region: 'us-east-1') {
+                    sh 'aws ecs update-service --cluster ${cluster} --service ${service} --force-new-deployment'
+                }
+            }
+        }
+    }
+}
