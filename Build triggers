@@ -35,8 +35,7 @@ Build Triggers Remotely
   1. wget command is required for this, so download wget binary for git bash
   2. Extract content in c:/program files/Git/mingw64/bin
   3. Run below command in Git Bash, (replace username,password,Jenkins URL)
-     wget -q --auth-no-challenge --user username --password password --output-document - 
-     'http://JENNKINS_IP:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
+     wget -q --auth-no-challenge --user username --password password --output-document - 'http://JENNKINS_IP:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)'
   4. Save the token in a file
 
 
