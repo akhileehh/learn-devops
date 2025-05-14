@@ -23,7 +23,7 @@ Configure  > Build > trigger remotely
 Build Triggers Remotely
  > Generate JOB URL
    1. Job Configure => Build Triggers 
-   2.Check mark on “Trigger builds remotely”
+   2. Check mark on “Trigger builds remotely”
    3. Give a token name
    4. Generate URL & save in a file
 
