@@ -1,0 +1,16 @@
+FOR JENKINS SSH AUTHENTICATION TO GITHUB
+> $ ssh-keygen.exe
+> $ ls ~/.shh    
+        > public key  - github/settings/ssh key 
+        > private key - jenkins 
+                        >manage jenkins/congigure global security /git hostkey verification / enable first connection
+                        > pipeline script from SCM with ssh repo url / add credentionals /username(github usr name)
+
+
+to ssh to private repo 
+> clone repo to local 
+      > $ git clone ssh link of repo
+      > crete jenkinsfile
+      > $ git add .
+      > $ git commit -m "message"
+      > $ git push origin master
