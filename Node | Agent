@@ -1,0 +1,25 @@
+To add slave or node to jenkins 
+> security group of node - allow ssh from jenkins sg
+> ssh to node 
+# apt update && apt install openjdk-17-jdk -y
+
+> create a devops user on node
+# mkdir /opt/jenkins
+# chown devops: ubuntu /opt/jenkins/
+# chmod 770 /opt/jenkins/
+# ls -ld /opt/jenkins/
+  drwxrwx--- 2 devops ubuntu 4096 Apr 6 13:21 /opt/jenkins/
+
+
+> JENKINS
+  > manage jenkins>add node 
+                  > remote root dir -/opt/jenkins 
+                  > add label
+> usage -only build with label  
+> lauch method - via ssh
+> host - <private ip of node>
+> add credential - user devops -passwword
+> host key verification - enable non verification
+
+## can also add key based ssh 
+> same as above add credentials - ssh username with private key , add prvt key of node $cat Downloads/node-key.pem 
