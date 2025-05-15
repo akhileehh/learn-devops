@@ -23,3 +23,9 @@ To add slave or node to jenkins
 
 ## can also add key based ssh 
 > same as above add credentials - ssh username with private key , add prvt key of node $cat Downloads/node-key.pem 
+
+HOW TO USE THIS NODE OR SLAVE 
+> configuration > restrict where this project run - add label mentioned while creating node
+> select github repo path
+> there is no maven installed on node 
+    > add build step - invoke top level maven target - select maven3.9 installed on tools 
