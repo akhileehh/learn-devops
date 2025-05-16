@@ -19,6 +19,7 @@ spec:
       app: frontend
 
 
+$ kubectl create -f <svc-name.yml>
 $ kubectl get svc
 $ kubectl describe svc <name of svc>
   it automatically maps the end point to the containerport with given label
@@ -27,3 +28,18 @@ $ kubectl describe svc <name of svc>
 >>> 2.Cluster ip
 
 >>> 3.LoadBalancer
+
+apiVersion: vl
+kind: Service
+metadata:
+  name: helloworld-service
+spec:
+  ports:
+   - port: 80
+     targetPort: vproapp-port
+     protocol: TCP
+  selector:
+     app: vproapp
+  type: LoadBalancer
+<
+
