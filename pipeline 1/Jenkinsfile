@@ -19,7 +19,7 @@ pipeline {
 		}
 	    stage('Fetch code') {
             steps {
-               git branch: 'atom', url: 'https://github.com/hkhcoder/vprofile-project.git'
+               git branch: 'vprofile-docker', url: 'https://github.com/akhileehh/javappdata.git'
             }
 
 	    }
