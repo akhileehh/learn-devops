@@ -8,8 +8,8 @@ pipeline {
 
     environment {
         registryCredential = 'ecr:us-east-2:awscreds'
-        appRegistry = "951401132355.dkr.ecr.us-east-2.amazonaws.com/vprofileappimg"
-        vprofileRegistry = "https://951401132355.dkr.ecr.us-east-2.amazonaws.com"
+        appRegistry = "95164544155.dkr.ecr.us-east-2.amazonaws.com/vprofileappimg"
+        vprofileRegistry = "https://9516552355.dkr.ecr.us-east-2.amazonaws.com"
         cluster = "name of cluster"
         service = "svc name"
     }
@@ -18,7 +18,7 @@ pipeline {
         stage('Fetch code') {
             steps {
             
-                git branch: 'vprofile-docker', url: 'https://github.com/akhileehh/learn-devops.git'
+                git branch: 'vprofile-docker', url: 'https://github.com/akhileehh/javappdata.git'
             }
 
         }
