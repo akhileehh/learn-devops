@@ -1,0 +1,32 @@
+1.tails and tolarations          
+      spec:
+        containers: <info>
+        toralations:
+               - key: "example-key"
+                 operator: "Exist"
+                 effect: "Noschedule"
+2.limits
+   >> limit resource for pods
+
+        spec:
+           containers:
+           - name: app
+            image: images.my-company.example/app: v4
+            resources:
+               requests:
+                   memory: "64Mi"
+                   cpu: "250m"
+               limits:
+                   memory: "128Mi"
+                   cpu: "500m"
+3.jobs
+>> not a continious running pod, it run for specific period
+>> there is also a kind:cronjob , can schedule jobs like an alarm
+
+4.DaemonSet
+
+>>  A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. As nodes
+    are added to the cluster, Pods are added to them. As nodes are removed from
+    the cluster, those Pods are garbage collected. Deleting a DaemonSet will clean
+    up the Pods it created.
+>> usually used to collect logs
