@@ -1,0 +1,7 @@
+> choco install terraform  >> on powershell
+  terraform version
+> create a iam user with administrator access
+  create access key 
+> On gitbash $aws configure > give keys ,us-east-1,json
+> add terraform extention on vscode 
+
