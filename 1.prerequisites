@@ -1,0 +1,9 @@
+> IAM user with admin access
+> EC2 machine with - ubuntu - t2 large
+> install docker engine
+  > add ubuntu user to docker group
+   $ sudo  usermod -aG docker ubuntu
+> install kubectl
+  > install tools > install and set up kubectl on linux > install kubectl binary with curl on linux
+> install terraform
+  > install > linux > ubuntu/debian 
