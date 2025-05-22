@@ -1,5 +1,6 @@
 HOW TO BUILD JAVA BASED MICRO SERVICE 'AD' LOCALLY
 --------------------------------------------------
+> https://github.com/akhileehh/E-commerce-app-demo/tree/main/src/ad
 > instruction to build locally will be published by developer src/ad/README.md
 > mainly java is build using maven or gradle ,here (gradle),Check README.md for more info
 > gradlew file take care of downloading dependencies,comiling,building also
