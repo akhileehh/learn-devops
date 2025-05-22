@@ -1,0 +1,37 @@
+HOW TO BUILD THE GO-LANG BASE product_catalog Microservice LOCALLY
+------------------------------------------------------------------
+> instruction to build locally will be published by developer
+> verify local copy of repo
+> on repo goto /src to containerize microservice 
+> we are containerizing product_catalog
+> cd /src/product_catalog
+
+> export PRODUCT_CATALOG_PORT=<any-unique-port>
+> go build -o product-catalog               //install go if not exist $sudo apt install golang-go
+      // direct and indirect dependencies are mentioned inside go.mod file
+> ls -ltr
+> you see a build sucess message - product_catalog binary file will be created
+
+TO CREATE DOCKERFILE
+----------------------------------------------------------
+> cd /src/product_catalog
+> rm -rf Dockerfile to create our own
+> vim Dockerfile
+
+```
+FROM golang:1.22-alpine AS builder              // multi stage docker build
+WORKDIR /usr/src/app
+COPY ..
+RUN go mod download                                 // go.mod contain depentencies
+RUN go build -o product_catalog ./                  // product_catalog file to be saved ,can also choose random file to save
+FROM alphine AS release                             // on the final stage of multi stage build we use light weight images with has basic app depentencies,binary created on last stage is just executed here
+WORKDIR /usr/src/app
+COPY ./products ./products
+COPY --from=builder /usr/src/app/product_catalog ./
+EXPOSE ${PRODUCT_CATALOG_PORT}                      // we exposed a port during local build ,we should also expose in container
+ENV PRODUCT_CATALOG_PORT 8088                      // 8088 Random port
+ENTRYPOINT ["./product_catalog"]                   // asking to execute binary
+```
+> to check docker file 
+> docker build -t <dockerhub user name>/<repo name>:v1
+> docker run <dockerhub user name>/<repo name>:v1  
