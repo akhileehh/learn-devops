@@ -1,5 +1,5 @@
-HOW TO BUILD THE GO-LANG BASE product_catalog LOCALLY
------------------------------------------------------
+HOW TO BUILD THE GO-LANG BASE product_catalog Microservice LOCALLY
+------------------------------------------------------------------
 > verify local copy of repo
 > on repo goto /src to containerize microservice 
 > we are containerizing product_catalog
