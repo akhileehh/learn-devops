@@ -9,3 +9,33 @@ HOW TO BUILD JAVA BASED MICRO SERVICE 'AD' LOCALLY
 > install java on machine $ sudo apt install openjdk-21-jre-headless
 > cd /src/ad
 > chmod +x ./gradlew
+
+> ./gradlew installDist
+> ls -ltr ./build/install/opentelemetry-demo-ad/bin/Ad
+> export AD_PORT=8080
+> export FEATURE_FLAG_GRPC_SERVICE_ADDR=featureflagservice:50053
+> ./build/install/opentelemetry-demo-ad/bin/Ad    // here the executable and jar file are kept
+
+
+TO CREATE MULTI STAGE DOCKERFILE
+-----------------------------------------------------
+> cd /src/ad/
+
+FROM eclipse-temurin:21-jdk AS builder
+WORKDIR /usr/src/app/
+COPY gradlew* settings.gradle* build.gradle .
+COPY ./gradle ./gradle
+RUN chmod +x ./gradlew
+RUN ./gradlew
+RUN ./gradlew downloadRepos
+COPY ..                                            // copy everything in /src/ad 
+COPY ./pb ./proto                                  // copied demo.proto file in as proto
+RUN chmos +x ./gradlew
+RUN ./gradlew installDist -PprotoSourceDir=./proto   // from readme
+
+#################################################
+FROM eclipse-temurin:21-jre                         // lightweight image with java runtime
+WORKDIR /usr/src/app
+COPY --from=builder /usr/src/app ./
+ENV AD_PORT 9099
+ENTRYPOINT ["./build/install/opentelemetry-demo-ad/bin/Ad"]
