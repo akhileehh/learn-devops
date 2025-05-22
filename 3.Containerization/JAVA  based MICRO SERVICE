@@ -33,7 +33,6 @@ COPY ./pb ./proto                                  // copied demo.proto file in 
 RUN chmos +x ./gradlew
 RUN ./gradlew installDist -PprotoSourceDir=./proto   // from readme
 
-#################################################
 FROM eclipse-temurin:21-jre                         // lightweight image with java runtime
 WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app ./
