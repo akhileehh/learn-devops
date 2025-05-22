@@ -38,3 +38,7 @@ WORKDIR /usr/src/app
 COPY --from=builder /usr/src/app ./
 ENV AD_PORT 9099
 ENTRYPOINT ["./build/install/opentelemetry-demo-ad/bin/Ad"]
+
+> to check docker file 
+> docker build -t <dockerhub user name>/<repo name>:v1
+> docker run <dockerhub user name>/<repo name>:v1 
