@@ -1,0 +1,10 @@
+1.system space is low !! of EC2 machine  
+  > increse volume attached 
+  > df -h
+  > lsblk
+  > sudo apt install cloud-guest-utils
+  > sudo growpart /dev/xvda1
+  > sudo resize2fs /dev/xvda1
+  > df -h
+
+2.
