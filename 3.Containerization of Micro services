@@ -21,14 +21,16 @@ TO CREATE DOCKERFILE
 FROM golang:1.22-alpine AS builder              // multi stage docker build
 WORKDIR /usr/src/app
 COPY ..
-RUN go mod download                             // go.mod contain depentencies
-RUN go build -o /go/bin/product_catalog ./      // /go/bin/product_catalog file to be saved ,can also choose random file to save
-FROM alphine AS release                         // on the final stage of multi stage build we use light weight images with has basic app depentencies,binary created on last stage is just executed here
+RUN go mod download                                 // go.mod contain depentencies
+RUN go build -o product_catalog ./                  // product_catalog file to be saved ,can also choose random file to save
+FROM alphine AS release                             // on the final stage of multi stage build we use light weight images with has basic app depentencies,binary created on last stage is just executed here
 WORKDIR /usr/src/app
 COPY ./products ./products
-COPY --from=builder /go/bin/product_catalog ./
-EXPOSE ${PRODUCT_CATALOG_PORT}                  // we exposed a port during local build ,we should also expose in container
-ENTRYPOINT ["./product_catalog"]                // asking to execute binary
+COPY --from=builder /usr/src/app/product_catalog ./
+EXPOSE ${PRODUCT_CATALOG_PORT}                      // we exposed a port during local build ,we should also expose in container
+ENV PRODUCT_CATALOG_PORT 8088                      // 8088 Random port
+ENTRYPOINT ["./product_catalog"]                   // asking to execute binary
 ```
 > to check docker file 
 > docker build -t <dockerhub user name>/<repo name>:v1
+> docker run <dockerhub user name>/<repo name>:v1  
