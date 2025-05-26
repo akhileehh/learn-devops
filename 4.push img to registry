@@ -1,0 +1,12 @@
+> there are many container registries like dockerhub,quay.io,ECR on aws etc
+> can use docker push to upload images
+> need to specify registry
+ 1. docker hub - docker login docker.io 
+ 2. quay.io    - docker login quay.io
+ 3. ECR        - docker login <ecr location> or ARN
+
+ eg; docker push docker.io/akhil/product-catalog:v2
+ > docker.io - registry
+ > akhil     - username 
+ > product-catalog  - repository in dockerhub
+ > :v2       - tag
