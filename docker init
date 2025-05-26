@@ -1,0 +1,3 @@
+> Docker init is simplest way to create dockerfiles 
+> docker init need docker desktop 
+  > not avilable on ec2 machine,use system terminal -cd to specifiy dir - docker init 
