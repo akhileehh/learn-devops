@@ -1,2 +1,9 @@
 HOW TO BUILD THE PYTHON BASE  Microservice 'recommendation' LOCALLY
 -------------------------------------------------------------------
+FROM python:3.12-slim-bookworm AS base
+WORKDIR /usr/src/app
+COPY requirements.txt ./
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+COPY . .
+ENTRYPOINT ["python", "recommendation_server.py"]    // in python we dont need to create binary ,just run the script on the entrypoint
