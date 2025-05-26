@@ -1,0 +1,13 @@
+> docker compose is a yaml file
+     1.services
+       example:  AD:
+                 image:---------
+                 build:-----
+                   dockerfile:
+                  environment:
+                  depends_on:
+                    flagd:   //it will run flagd and the ad service
+     2.networks
+     3.volumes
+
+     
