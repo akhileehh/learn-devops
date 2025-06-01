@@ -22,7 +22,6 @@ NACL
 1 more VPC => VPC Peering
 ---------------------------------------------------------------------------------------------
 
-
 > your vpc create one
 > create 4 subnets by selecting created vpc > 2 public diff AZ,2 private diff AZ
 > create igw - action attach to vpc
@@ -41,6 +40,10 @@ NACL
 
 # to assign DNS hostnames for vpc 
   - select vpc- edit vpc settings - enable dns hostname
+
+> TO CREATE A BOSTON HOST - it is the single point of entry in vpc to access the resourses in private subnet
+
+
 
 
 
