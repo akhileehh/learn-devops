@@ -33,6 +33,12 @@ NACL
 # to assign auto public ip to every instance in public subnet 
  - subnets-select each public  subnets -edit subnet settings -auto assign ip
 
+> create Elastic ip 
+> craate natgateway($) - place NAT gateway in public subnet1 - allocate EIP
+> create private route tables > select vpc 
+    > subnets association -edit -select 2 private subnets
+    > edit routes - 0.0.0.0/0 to NAT gateway
+
 
 
 
