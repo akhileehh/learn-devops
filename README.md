@@ -10,7 +10,7 @@ HIGH AVAILABILITY VPC
 ![]()
 
 PRIVATE IP RANGES
-![]()
+![](https://github.com/akhileehh/learn-devops/blob/vpc/pictures/Screenshot%202025-06-01%20163453.png?raw=true)
 
 SUBNET MASK
 ![]()
