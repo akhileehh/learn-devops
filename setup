@@ -23,7 +23,10 @@ NACL
 ---------------------------------------------------------------------------------------------
 
 
-> 
+> your vpc create one
+> create 4 subnets by selecting created vpc > 2 public diff AZ,2 private diff AZ
+> create igw
+> create route tables > edit 0.0.0.0/0 to igw
 
 
 
