@@ -1,5 +1,16 @@
-THIS IS A REFERENCE NOTE FOR DEVOPS ,CHECK THE BRANCHES FOR MORE INFORMATION
+
+ • virtual private cloud is an on-demand configurable pool of shared 
+   computing resources allocated within a public cloud environment.
+ • Control over network environment, select IP address range, 
+   subnets and configure route tables and gateways.
 
 ----------------------------------------------------------------------------
+HIGH AVAILABILITY VPC
 
-![](https://github.com/akhileehh/learn-devops/blob/automation/essential%20pictures/devopstools%20(2).jpg?raw=true)
+![]()
+
+PRIVATE IP RANGES
+![]()
+
+SUBNET MASK
+![]()
