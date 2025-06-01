@@ -13,4 +13,4 @@ PRIVATE IP RANGES
 ![](https://github.com/akhileehh/learn-devops/blob/vpc/pictures/Screenshot%202025-06-01%20163453.png?raw=true)
 
 SUBNET MASK
-![]()
+![](https://github.com/akhileehh/learn-devops/blob/vpc/pictures/Screenshot%202025-06-01%20163524.png?raw=true)
