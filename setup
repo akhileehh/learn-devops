@@ -39,8 +39,8 @@ NACL
     > subnets association -edit -select 2 private subnets
     > edit routes - 0.0.0.0/0 to NAT gateway
 
-
-
+# to assign DNS hostnames for vpc 
+  - select vpc- edit vpc settings - enable dns hostname
 
 
 
