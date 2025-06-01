@@ -1,0 +1,3 @@
+> choosed  us-west-1  have only two AZ
+> public subnet  - if the subnets are routing the traffic through the route table to internet gateway 
+> private subnet - if the subnets are routing the traffic through the route table to NAT gateway
