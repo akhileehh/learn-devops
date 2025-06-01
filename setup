@@ -25,8 +25,13 @@ NACL
 
 > your vpc create one
 > create 4 subnets by selecting created vpc > 2 public diff AZ,2 private diff AZ
-> create igw
-> create route tables > edit 0.0.0.0/0 to igw
+> create igw - action attach to vpc
+> create public route tables > select vpc 
+    > subnets association -edit -select 2 public subnets
+    > edit routes - 0.0.0.0/0 to igw
+
+# to assign auto public ip to every instance in public subnet 
+ - subnets-select each public  subnets -edit subnet settings -auto assign ip
 
 
 
