@@ -55,7 +55,19 @@ NACL
  $ ssh -i web-key.pem ubuntu@<private ip of instance>
  $ chmod 400 web-key.pem
 > install packages like httpd wget unzip 
-> use template from tooplate 
+> use template from tooplate $ wget <url> , $ unzip ---.zip ,$ cp ----/* /var/www/html/
+ $ systemctl start&enable httpd
+ $ systemctl restart http
+> only way to view this website through the LB we are going to place in public subnet
+ > create target grp -vpc 
+ > crete sg for LB - vpc - 80 from anywhere ipv4 & ipv6
+ > crete application LB -vpc - public subnet1,public subnet2 - sg - listener 80 to target group
+ > update sg of this instance  80 from sg of LB
+> get dns name of LB , search it on web
+ 
+
+
+
 
 
 
