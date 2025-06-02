@@ -41,16 +41,23 @@ NACL
 # to assign DNS hostnames for vpc 
   - select vpc- edit vpc settings - enable dns hostname
 
-> TO CREATE A BOSTON HOST - it is the single point of entry in vpc to access the resourses in private subnet
+> TO CREATE A BASTION HOST - it is the single point of entry in vpc to access the resourses in private subnet
 > crete ec2 in public subnet of vpc - sg shh allowed from myip
 > create a keypair [door] bastion-key
 > select ami checked for vulnarabilities [cis]
 
 # now creating instance in private subnet , ssh to this instance through baston host
 > crete keypair [web-key] 
->$ scp -i /Downloads/bastion-key.pem Downloads/web-key.pem ubuntu@publicip_of_boston:/home/ubuntu/
-> shh to boston to check $ ls /home/ubuntu
+>$ scp -i /Downloads/bastion-key.pem Downloads/web-key.pem ubuntu@publicip_of_bastion:/home/ubuntu/
+> shh to bastion to check $ ls /home/ubuntu
 > crete ec2 - ubuntu -keypair[web-key] -private subnet -sg shh source:custom sg_of_bastion
+> to access this ec2 on private subnet - ssh to bastion and from there to this instance
+ $ ssh -i web-key.pem ubuntu@<private ip of instance>
+ $ chmod 400 web-key.pem
+> install packages like httpd wget unzip 
+> use template from tooplate 
+
+
 
 
 
