@@ -1,12 +1,12 @@
 📌📌
-1.Create VPC
-2.Create Subnets
-3.Create Internet Gateway
-4.Create Route Table for Public Subnet
-5.Assosiate Route Table with Subnets & IGW
-6.Create NAT GW
-7.Crete Route table for Private Subnet
-8.Associate Route Table with Subnets & NAT GW
+1.Create VPC                  
+2.Create Subnets               
+3.Create Internet Gateway               
+4.Create Route Table for Public Subnet          
+5.Assosiate Route Table with Subnets & IGW            
+6.Create NAT GW                          
+7.Crete Route table for Private Subnet                
+8.Associate Route Table with Subnets & NAT GW                 
 
 
  • virtual private cloud is an on-demand configurable pool of shared 
