@@ -42,6 +42,17 @@ NACL
   - select vpc- edit vpc settings - enable dns hostname
 
 > TO CREATE A BOSTON HOST - it is the single point of entry in vpc to access the resourses in private subnet
+> crete ec2 in public subnet of vpc - sg shh allowed from myip
+> create a keypair [door] bastion-key
+> select ami checked for vulnarabilities [cis]
+
+# now creating instance in private subnet , ssh to this instance through baston host
+> crete keypair [web-key] 
+>$ scp -i /Downloads/bastion-key.pem Downloads/web-key.pem ubuntu@publicip_of_boston:/home/ubuntu/
+> shh to boston to check $ ls /home/ubuntu
+> crete ec2 - ubuntu -keypair[web-key] -private subnet -sg shh source:custom sg_of_bastion
+
+
 
 
 
