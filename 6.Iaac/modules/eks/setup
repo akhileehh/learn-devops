@@ -1,0 +1,48 @@
+FOR creating EKS cluster 
+1. IAM role > cluster -policy
+   IAM role > node -policy
+2. EKS cluster
+3. Crete Node group -attach to cluster
+
+-----------------
+
+### Main.tf  OVERVIEW
+
+1. **Cluster IAM Role** (`aws_iam_role.cluster`):
+   - Creates an IAM role for the EKS cluster
+   - Allows EKS service to assume the role
+   - Attaches the `AmazonEKSClusterPolicy`
+
+2. **EKS Cluster** (`aws_eks_cluster.main`):
+   - Configures the main EKS cluster
+   - Uses the cluster IAM role
+   - Sets up VPC configuration with subnet IDs
+   - Has proper dependency on the cluster policy attachment
+
+3. **Node IAM Role** (`aws_iam_role.node`):
+   - Creates an IAM role for worker nodes
+   - Allows EC2 service to assume the role
+   - Uses node group name in the role name
+
+4. **Node Policies** (`aws_iam_policy_attachment.node_policy`):
+   - Uses `for_each` to attach three essential policies:
+     - `AmazonEKSWorkerNodePolicy`
+     - `AmazonEKS_CNI_Policy`
+     - `AmazonEC2ContainerRegistryReadOnly`
+
+5. **Node Groups** (`aws_eks_node_group.main`):
+   - Uses `for_each` to create multiple node groups
+   - Configures instance types and capacity type
+   - Sets up auto-scaling configuration
+   - Has proper dependency on node policy attachments
+
+### Dependencies
+The code has proper dependency chains:
+- Cluster depends on cluster policy attachment
+- Node groups depend on node policy attachments
+
+### Variables Used (implied from code)
+- `var.cluster_name`
+- `var.cluster_version`
+- `var.subnet_ids`
+- `var.node_groups` (map type with instance_types, capacity_type, and scaling_config)
