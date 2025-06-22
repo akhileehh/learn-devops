@@ -8,4 +8,9 @@
 > kubectl config current-context
 > kubectl get nodes
 > need a service account on kubernetes otherthan default for extra permission like webhook,api etc for that we can create a role and bind it to service account
-> here we only need a service aacount 
+> here we only need a service account 
+> clone the repo to machine > cd kubernetes > ls -ltr 
+> kubectl apply -f serviceaccount.yaml
+> kubectl get sa
+> kubectl apply -f complete-deploy.yaml
+> kubectl get pods | wait till everything run
