@@ -1,0 +1,9 @@
+> it is a kind of python library used for configuration management
+> control plane and many target machines
+> installation (apt/pip) refer official documentation 
+> https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-ubuntu
+> allow 22 from control plane sg (on every terget machines)
+> to turn of host_key_checking 
+  > /etc/ansible/ansible.cfg  copy the command for including plugins and run from cd /etc/ansible#
+  > host_key_checking=False
+  
