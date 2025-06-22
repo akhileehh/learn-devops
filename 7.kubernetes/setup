@@ -14,3 +14,4 @@
 > kubectl get sa
 > kubectl apply -f complete-deploy.yaml
 > kubectl get pods | wait till everything run
+> kubectl get svc | grep frontendproxy   > it will be still in clusterip
