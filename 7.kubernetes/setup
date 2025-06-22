@@ -7,3 +7,5 @@
 > kubectl config view
 > kubectl config current-context
 > kubectl get nodes
+> need a service account on kubernetes otherthan default for extra permission like webhook,api etc for that we can create a role and bind it to service account
+> here we only need a service aacount 
