@@ -1,0 +1,9 @@
+> connect kubectl with created EKS cluster
+> install aws cli in t2.large machine
+  > sudo apt install unzip 
+> also need aws credentials > we already creted it $cat `/.aws/credientials
+  > aws configure
+> $ aws eks update-kubeconfig --region <region-code> --name <my-cluster>   it will add new context
+> kubectl config view
+> kubectl config current-context
+> kubectl get nodes
