@@ -6,11 +6,11 @@ to run[ansible-playbook -i <inventory> <name of playbook.yml]
  become: yes
  tasks:
   - name: Install httpd 
-    ansible. builtin. yum:
+    ansible.builtin.yum:
       name: httpd
       state : present
   -name: Start service
-    ansible. builtin. service:
+    ansible.builtin.service:
       name: httpd
       state: started
       enabled: yes
@@ -19,6 +19,11 @@ to run[ansible-playbook -i <inventory> <name of playbook.yml]
  become: yes
  tasks:
    - name: Install mariadb-server
-     ansible. builtin. yum:
+     ansible.builtin.yum:
        name: mariadb-server
        state: present
+   -name: Start service
+    ansible.builtin.service:
+      name: mariadb
+      state: started
+      enabled: yes
