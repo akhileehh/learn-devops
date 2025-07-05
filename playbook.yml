@@ -1,5 +1,7 @@
 this is a basic ansible playbook to install httpd and mariadb
 to run[ansible-playbook -i <inventory> <name of playbook.yml]
+> ansible-playbook -i inventory playbook.yml -C              >>>> Dry run
+> ansible-playbook -i inventory playbook.yml --syntax-check  >>>> checks syntax
 ---
 -name: Webserver setup
  hosts: webservers
