@@ -1,4 +1,5 @@
 this is a basic ansible playbook to install httpd and mariadb
+> configuration tools like ansible are idempotent (only apply changes when target is different )
 to run[ansible-playbook -i <inventory> <name of playbook.yml]
 > ansible-playbook -i inventory playbook.yml -C              >>>> Dry run
 > ansible-playbook -i inventory playbook.yml --syntax-check  >>>> checks syntax
