@@ -12,7 +12,7 @@
 
 3.can define in roles [include var from files in playbook]
 
-4.variables generated from setup modules
+4.variables generated from setup modules/fact variables
   ansible_os_family
   ansible_processor_cores
   ansible_kernal
