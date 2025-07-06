@@ -10,14 +10,14 @@
 > difference between ansible task: and handlers:
   > task runs every time
   > handlers run only if there is any conifuration change occure 
-    Purpose: Run a task only when notified (typically after a change).
-    Use Case: Restarting a service only if a config file was updated.
-    Example: notify: restart nginx after changing a config.
+    #Purpose: Run a task only when notified (typically after a change).
+    #Use Case: Restarting a service only if a config file was updated.
+    #Example: notify: restart nginx after changing a config.
 
 > use of template module
-    Purpose: Dynamically generate configuration files using Jinja2 templates.
-    Use Case: When you need to insert variables (like IPs, usernames) into config files.
-    Example: Creating nginx.conf with values from Ansible variables.
+    #Purpose: Dynamically generate configuration files using Jinja2 templates.
+    #Use Case: When you need to insert variables (like IPs, usernames) into config files.
+    #Example: Creating nginx.conf with values from Ansible variables.
     
       
 
