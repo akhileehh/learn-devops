@@ -1,10 +1,10 @@
-1.define inside playbook
+1.define inside playbook  [higher priority]
   -hosts:webservergrp
    vars:
     http_port: 80
     sqluser: admin
   ### to call this use "{{sqluser}}"
-2.inventory based [in inventory file]
+2.inventory based [create these file on inventory level]
   group_var/all
   group_vars/groupname
   host_vars/hostname
