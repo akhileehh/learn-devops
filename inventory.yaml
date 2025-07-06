@@ -1,0 +1,21 @@
+all:
+  vars:
+    ansible_ssh_private_key_file: clientkey.pem
+
+  children:
+    webservers:
+      hosts:
+        web01:
+          ansible_host: 172.31.29.40
+          ansible_user: ec2-user
+        web02:
+          ansible_host: 172.31.29.59
+          ansible_user: ec2-user
+        web03:
+          ansible_host: 172.31.20.244
+          ansible_user: ubuntu
+
+    dbservers:
+      hosts:
+        db01:
+          ansible_host: 172.31.22.244
