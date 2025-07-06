@@ -4,13 +4,18 @@
     http_port: 80
     sqluser: admin
   ### to call this use "{{sqluser}}"
+
 2.inventory based [create these file on inventory level]
-  group_var/all
-  group_vars/groupname
-  host_vars/hostname
+  group_var/all         >> 3rd priority
+  group_vars/groupname  >> 2nd priority
+  host_vars/hostname    >>high priority after playbook var
+
 3.can define in roles [include var from files in playbook]
+
 4.variables generated from setup modules
   ansible_os_family
   ansible_processor_cores
   ansible_kernal
   ansible_architecture
+
+5.command line var [ansible-playbook -e sqluser=admin variable.yaml] 'first priorty than everything'
