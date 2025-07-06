@@ -3,6 +3,7 @@
    vars:
     http_port: 80
     sqluser: admin
+  ### to call this use "{{sqluser}}"
 2.inventory based [in inventory file]
   group_var/all
   group_vars/groupname
