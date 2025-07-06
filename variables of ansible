@@ -1,0 +1,15 @@
+1.define inside playbook
+  -hosts:webservergrp
+   vars:
+    http_port: 80
+    sqluser: admin
+2.inventory based [in inventory file]
+  group_var/all
+  group_vars/groupname
+  host_vars/hostname
+3.can define in roles [include var from files in playbook]
+4.variables generated from setup modules
+  ansible_os_family
+  ansible_processor_cores
+  ansible_kernal
+  ansible_architecture
