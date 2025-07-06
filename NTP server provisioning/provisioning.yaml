@@ -7,21 +7,22 @@
       yum:
         name: chrony
         state: present
-      when: ansible_distribution = "CentOS"
+      when: ansible_distribution == "CentOS"
     - name: install ntp on ubuntu
       apt:
         name: ntp
         state: present
-       when: ansible_distribution = "Ubuntu"
+        update_cache: yes # it run apt update and apt install these are good to avoid dependency errors
+       when: ansible_distribution == "Ubuntu"
     - name: start service on CentOS
       service:
         name: chronyd
         state: started
         enabled: yes
-      when: ansible_distribution = "CentOS"  
+      when: ansible_distribution == "CentOS"  
     - name: start service on Ubuntu
       service:
         name: ntp
         state: started
         enabled: yes
-      when: ansible_distribution = "Ubuntu"    
+      when: ansible_distribution == "Ubuntu"    
