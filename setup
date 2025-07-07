@@ -7,7 +7,7 @@
   > /etc/ansible/ansible.cfg  copy the command for including plugins and run from cd /etc/ansible#
   > host_key_checking=False
 
-> ansible-galaxy init <role name>     >>> create a file hierarchy 
+> ansible-galaxy init <role name>     >>> create a file hierarchy ,can view with tree command 'apt install tree'
 
 > difference between ansible task: and handlers:
   > task runs every time
