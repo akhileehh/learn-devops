@@ -1,0 +1,5 @@
+ADDING NEW HOSTNAME EKS With Existing ingress        
+> kubectl get ingress -n istio-system 
+> kubectl edit ingress fair-wa-ingress -n istio-system > add new host entry 
+> kubectl get ingress -n istio-system 
+> k8s-istiosys-fairwain-05513d9254-1710510194.ap-south-1.elb.amazonaws.com  // address of ingress > add this as cname record in route53
